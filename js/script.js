@@ -15,20 +15,33 @@ Se abbiamo difficoltà con lo stampare in pagina, proviamo prima a stampare col 
 
 const cart = [ 'farina', 'latte', 'prosciutto', 'patate', 'ravanelli', 'insalata', 'lenticchie', 'pomodoro', 'fagioli', 'olio', 'sale', 'spinaci', 'pasta', 'riso'];
 
-let  i = 0;
+const mallList = document.getElementById('mall-list');
+let listFood = '<ul>'; 
 
-while (i < cart.lenght){
+let i = 0;
+
+while (i < cart.length){
+    listFood += `<li> ${cart [i]}</li>`;
     console.log(cart[i]);
     i++;
 }
 
-
+listFood += '</ul>'; 
+console.log(listFood);
+mallList.innerHTML = listFood;
 
 //for
 
-let shoppingList = [ 'farina', 'latte', 'prosciutto', 'patate', 'ravanelli', 'insalata', 'lenticchie', 'pomodoro', 'fagioli', 'olio', 'sale', 'spinaci', 'pasta', 'riso'];
+const element = document.getElementById('shopping-list');
+let listItems = '<ul>'; 
 
-for (let i = 0; i < shoppingList.lenght; i++){
-    console.log(shoppingLists[i])
+const list = [ 'farina', 'latte', 'prosciutto', 'patate', 'ravanelli', 'insalata', 'lenticchie', 'pomodoro', 'fagioli', 'olio', 'sale', 'spinaci', 'pasta', 'riso'];
+
+for (let i = 0; i < list.length; i++){
+    listItems += `<li> ${list [i]}</li>`;
+    console.log(list[i]);
 }
 
+listItems += '</ul>'; 
+console.log(listItems);
+element.innerHTML = listItems;
